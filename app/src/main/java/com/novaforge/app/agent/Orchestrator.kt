@@ -405,6 +405,8 @@ class SecurityManager {
 class AppStateManager {
     private val stateFile = File("app_state.json")
 
+    @kotlinx.serialization.Serializable
+    @kotlinx.serialization.Serializable
     data class AppState(
         val lastProjectId: String = "",
         val lastOpenedTime: Long = 0,
@@ -412,6 +414,8 @@ class AppStateManager {
         val buildHistory: List<BuildLog> = emptyList()
     )
 
+    @kotlinx.serialization.Serializable
+    @kotlinx.serialization.Serializable
     data class BuildLog(
         val projectId: String,
         val timestamp: Long,
